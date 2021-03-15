@@ -81,7 +81,40 @@ body {
     color: #212121;
 }
 
+input[type="checkbox"] {
+    display: none;
+}
 
+
+
+.box label {
+    cursor: pointer;
+    transition: .4s;
+    position: absolute;
+    left: 79.8%;
+}
+
+.box input {
+    width: 25px;
+    height: 25px;
+    border-radius: 10px;
+    outline: none;
+    color: gray;
+    border: none;
+    box-shadow: -5px -5px 20px #edeff1, 5px 5px 15px #cfcfd8;
+    transition: .3s;
+    opacity: 0;
+}
+
+.box input:focus {
+    box-shadow: -10px -10px 40px #edeff1, 10px 10px 30px #cfcfd8;
+
+}
+
+#check:checked+.box input {
+    width: 150px;
+    opacity: 1;
+}
 
 .preview__inner {
     color: #fff;
