@@ -39,3 +39,14 @@ document.addEventListener('DOMContentLoaded', function () {
         document.querySelector(`[data-tabs-target="${path}"]`).classList.add('tabs__content--active');
     };
 });
+
+
+$(function () {
+
+    $('.team__slider').slick({
+        arrows: false,
+        dots: true,
+        autoplay: true
+    });
+
+});
