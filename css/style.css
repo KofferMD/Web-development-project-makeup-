@@ -248,7 +248,7 @@ h3 {
 }
 
 .service__subtitle {
-    width: 625px;
+    max-width: 625px;
     text-align: center;
     margin: 0 auto;
     padding-top: 30px;
@@ -491,7 +491,7 @@ h2 {
 
 .price__subtitle {
     display: flex;
-    width: 625px;
+    max-width: 625px;
     text-align: center;
     margin: 0 auto;
     padding-top: 35px;
@@ -991,7 +991,26 @@ h2 {
     .content__item-1 {
         margin-top: 0px;
     }
+
+    .price__box {
+        flex-wrap: wrap;
+        padding-top: 40px;
+    }
+
+    .price__box-item {
+        margin: auto;
+    }
+
+    .price__box-item:not(:last-child) {
+        margin: auto;
+    }
+
+    .price__box-item:last-child {
+        margin-top: 40px;
+    }
 }
+
+
 
 @media (max-width: 1164px) {
     .content__list {
@@ -1063,8 +1082,12 @@ h2 {
         margin: 35px auto;
     }
 
+    .service__block:first-child {
+        margin: 0 auto;
+        margin-bottom: 5px;
+    }
+
     .service__block+.service__block {
-        margin-left: 31px;
         margin: 0 auto;
     }
 
@@ -1081,6 +1104,23 @@ h2 {
 @media (max-width: 780px) {
     .service__block {
         margin: 20px auto;
+    }
+
+    .service__block+.service__block {
+        margin: auto;
+    }
+
+    .service__block:last-child {
+        margin-top: 5px;
+    }
+
+    .service__item-1 {
+        padding-top: 40px;
+        margin: 5px 0;
+    }
+
+    .service__item-2 {
+        margin: 5px 0;
     }
 }
 
@@ -1103,6 +1143,15 @@ h2 {
         margin: 0 auto;
         max-width: 370px;
 
+    }
+
+    .price__box {
+        flex-wrap: wrap;
+        padding-top: 0;
+    }
+
+    .price__box-item:not(:last-child) {
+        margin-top: 40px;
     }
 }
 
@@ -1251,7 +1300,7 @@ h2 {
 
 
 
-@media (max-width: 395px) {
+@media (max-width: 405px) {
     .preview__inner {
         display: block;
     }
@@ -1265,6 +1314,16 @@ h2 {
         font-size: 15px;
         margin-bottom: 40px;
     }
+
+    .content li {
+        display: inline-block;
+        width: 330px;
+        height: 330px;
+    }
+
+    .content__list {
+        max-width: 330px;
+    }
 }
 
 @media (max-width: 385px) {
@@ -1277,11 +1336,25 @@ h2 {
         line-height: 25px;
         padding-top: 120px;
     }
+
+    .price__box-item {
+        min-width: 345px;
+    }
 }
 
-@media (max-width: 321px) {
+@media (max-width: 320px) {
     .info__subtitle {
         width: 266px;
         font-size: 14px;
+    }
+
+    .price__box-item {
+        min-width: 285px;
+    }
+
+    .content li {
+        display: inline-block;
+        width: 290px;
+        height: 290px;
     }
 }

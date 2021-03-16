@@ -46,7 +46,31 @@ $(function () {
     $('.team__slider').slick({
         arrows: false,
         dots: true,
-        autoplay: true
+        autoplay: true,
+        responsive: [{
+                breakpoint: 1170,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 750,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
     });
 
     $('.menu__btn').on('click', function () {
