@@ -603,7 +603,7 @@ h2 {
 
 .team__subtitle {
     padding-top: 37px;
-    width: 625px;
+    max-width: 625px;
     text-align: center;
     margin: 0 auto;
 }
@@ -616,7 +616,7 @@ h2 {
 }
 
 .team__person-box {
-    min-width: 370px;
+    width: 370px;
     padding-top: 130px;
 }
 
@@ -742,7 +742,7 @@ h2 {
 
 
 .blog__subtitle {
-    width: 625px;
+    max-width: 625px;
     text-align: center;
     margin: 0 auto;
     padding-top: 30px;
@@ -775,6 +775,7 @@ h2 {
     display: flex;
     font-size: 17px;
     padding-top: 30px;
+    flex-wrap: wrap;
 }
 
 .blog__item-data {
@@ -794,7 +795,7 @@ h2 {
 }
 
 .blog__item-text {
-    width: 425px;
+    max-width: 425px;
     padding-top: 30px;
     font-size: 15px;
 }
@@ -807,7 +808,7 @@ h2 {
 }
 
 .blog__img {
-    min-width: 570px;
+    max-width: 570px;
     float: right;
 }
 
@@ -857,7 +858,7 @@ h2 {
 .contact__img {
     background-image: url('../images/rawpixel.png');
     background-repeat: no-repeat;
-    width: 1400px;
+    max-width: 1400px;
     text-align: center;
     margin: 0 auto;
 
@@ -870,7 +871,7 @@ h2 {
 }
 
 .contact__subtitle {
-    width: 625px;
+    max-width: 625px;
     margin: 0 auto;
     padding-top: 30px;
     text-align: center;
@@ -899,13 +900,15 @@ h2 {
 }
 
 .feedback__input {
-    padding: 27px 230px 26px 20px;
+    padding: 27px 20px 26px;
     display: inline;
     font-weight: 600;
     font-family: 'Open Sans', sans-serif;
     font-size: 20px;
     border-radius: 10px;
     outline: none;
+    width: 500px;
+    height: 80px;
 }
 
 .feedback_name {
@@ -1017,6 +1020,17 @@ h2 {
         margin: 0 auto;
         max-width: 745px;
     }
+
+    .slick-slide img {
+        display: block;
+        margin: auto;
+    }
+
+    .team__person-box:not(:last-child) {
+        padding-right: 0;
+    }
+
+
 }
 
 
@@ -1074,7 +1088,29 @@ h2 {
         margin-left: auto;
     }
 
+    .blog__item-img {
+        width: 400px;
+    }
+
+    .blog__img {
+        width: 400px;
+    }
+
+    .feedback__input {
+        margin: 0;
+        width: 45%;
+    }
+
+    .feedback__write {
+        width: 90%;
+    }
+
+    .feedback__btn {
+        margin-right: 5%;
+    }
 }
+
+
 
 @media (max-width: 885px) {
     .service__item-1 {
@@ -1122,6 +1158,8 @@ h2 {
     .service__item-2 {
         margin: 5px 0;
     }
+
+
 }
 
 
@@ -1152,6 +1190,14 @@ h2 {
 
     .price__box-item:not(:last-child) {
         margin-top: 40px;
+    }
+
+    .blog__item-img {
+        width: 355px;
+    }
+
+    .blog__img {
+        width: 355px;
     }
 }
 
@@ -1186,7 +1232,38 @@ h2 {
     .content {
         padding-top: 40px;
     }
+
+    .blog__item-img {
+        display: none;
+    }
+
+    .blog__img {
+        display: none;
+    }
+
+    .blog__item-1 {
+        width: 50%;
+        margin: 0 auto;
+        padding-top: 0;
+    }
+
+    .blog__item-2 {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .blog__item-3 {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .blog__item-info-1 {
+        width: 90%;
+        margin-left: 30px;
+    }
 }
+
+
 
 @media (max-width: 625px) {
     .preview__inner {
@@ -1296,8 +1373,46 @@ h2 {
     .preview__anchor {
         margin: 70px 0 0
     }
-}
 
+
+
+    .contact__icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .contact__text {
+        font-size: 13px;
+    }
+
+    .contact_info {
+        margin-top: 40px;
+        flex-wrap: wrap;
+    }
+
+    .contact__item:not(:last-child) {
+        margin: 0;
+    }
+
+    .feedback__form {
+        margin-top: 40px;
+    }
+
+    .feedback__input {
+        height: 40px;
+    }
+
+    .feedback__write {
+        min-height: 200px;
+    }
+
+    .feedback__btn {
+        width: 120px;
+        height: 46px;
+        font-size: 16px;
+
+    }
+}
 
 
 @media (max-width: 405px) {
@@ -1340,7 +1455,21 @@ h2 {
     .price__box-item {
         min-width: 345px;
     }
+
+    .slick-slide img {
+        max-width: 270px;
+    }
+
+    .feedback__input {
+        font-size: 15px;
+    }
+
+    .feedback__write {
+        font-size: 15px;
+    }
 }
+
+
 
 @media (max-width: 320px) {
     .info__subtitle {
@@ -1356,5 +1485,25 @@ h2 {
         display: inline-block;
         width: 290px;
         height: 290px;
+    }
+
+    .blog__item-info {
+        margin-left: 0;
+    }
+
+    .blog__item-info-1 {
+        margin-left: 0;
+    }
+
+    .blog__item-data {
+        margin-right: 13px;
+    }
+
+    .blog__item-data {
+        margin-right: 0;
+    }
+
+    .blog__item-option {
+        font-size: 15px;
     }
 }
